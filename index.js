@@ -15,9 +15,17 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(objet){
-    /*Your code here*/
+function createMenuItem(newName, newPrice, newCategory)
+{
+  let newAddition = 
+  {
+    name: newName,
+    price: newPrice,
+    category: newCategory,
+  }
+  return newAddition;
 }
+console.log(createMenuItem('tacos', 8, 'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
