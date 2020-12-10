@@ -27,6 +27,7 @@ function createMenuItem(newName, newPrice, newCategory)
 }
 console.log(createMenuItem('tacos', 8, 'Lunch'));
 
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -36,7 +37,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem('sushi', 12 , 'Dinner'));
+console.log(createMenuItem('Bacon and Eggs' , 9 , 'Breakfast'));
+console.log(createMenuItem('bagel bites', 4 , 'Lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -56,8 +59,20 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(person)
+  {
+    if (person === "teacher" || person === "student")
+    {
+      return this.price - (this.price * 0.25);
+    }
+    else 
+    {
+      return this.price - (this.price * 0.10);
+    }
+  }
 }
+console.log(burger.discount("teacher"));
+console.log(burger.discount("public"));
 
 
 
